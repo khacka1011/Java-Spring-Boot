@@ -1,0 +1,33 @@
+
+create table_album_cmt_board2 (
+seq 		int 		not null 	primary key auto_increment,
+subject 		varchar(150) 	not null,
+writer 		varchar(12) 	not null,
+mail 		varchar(50),
+password 	varchar(12) 	not null,
+content 		varchar(2000),
+cmt 		int 		not null,
+cmtyes 		char(1),
+hit 		int 		not null,
+wip 		varchar(15) 	not null,
+wdate 		datetime 	not null
+);
+
+create table album_cmt_comment2 (
+seq 		int 		not null 	primary key auto_increment,
+pseq 		int 		not null,
+writer 		varchar(12) 	not null,
+password 	varchar(12) 	not null,
+content 		varchar(2000) 	not null,
+wdate 		datetime 	not null
+);
+
+create table album_cmt_file2 (
+seq 		int 		not null 	primary key auto_increment,
+pseq 		int 		not null,
+filename 		varchar(2000) 	not null,
+filesize 		int 		not null,
+latitude 		varchar(12),
+longitude 	varchar(12),
+wdate 		datetime 	not null
+);
